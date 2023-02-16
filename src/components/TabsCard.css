@@ -1,0 +1,81 @@
+.tabsWrapper {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 28rem;
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255);
+
+  -webkit-box-shadow: 2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+}
+
+.tabs {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.tabSelect {
+  width: 100%;
+  /* border: 1px solid gold; */
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: larger;
+  cursor: pointer;
+  /* background-color: rgb(255, 255, 255); */
+  border-right: 1px solid rgb(59, 59, 59);
+
+  border-bottom: 1px solid rgb(59, 59, 59);
+
+  transition: ease-in-out 0.5s;
+
+  background-color: rgb(50, 122, 255);
+  color: white;
+}
+.tabs :last-child {
+  border-right: none;
+}
+
+.tabSelect.active {
+  background-color: white;
+  color: blue;
+  border-bottom: none;
+}
+
+.tabData {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+  padding: 1rem;
+}
+
+.tabData img {
+  height: 80%;
+  padding: 0.5rem;
+}
+.data {
+  display: flex;
+  height: 80%;
+  flex-basis: 0.8;
+  padding: 1rem;
+  color: rgb(29, 29, 156);
+  gap: 1rem;
+  /* border: 2px solid rgb(71, 99, 53); */
+
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.data h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.data p {
+  color: gray;
+}

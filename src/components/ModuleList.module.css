@@ -1,0 +1,31 @@
+.available-modules {
+  list-style: none;
+  color: #0d4f86;
+
+  max-width: 420px;
+  margin-top: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px solid lawngreen; */
+}
+
+.available-modules a {
+  font-size: larger;
+  padding: 1rem 0.5rem;
+  /* background-color: blanchedalmond; */
+  text-decoration: none;
+  cursor: pointer;
+  transition: ease-out 0.05s;
+
+  border-bottom: 1px solid rgb(160, 160, 160);
+}
+.available-modules a:hover {
+  background-color: #0a67b3;
+  color: white;
+}
+
+.available-modules :last-child {
+  border-bottom: none;
+}

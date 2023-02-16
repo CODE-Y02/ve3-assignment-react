@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 420px;
+  width: 20rem;
+  height: 24rem;
+  max-height: 100vh;
+
+  border: 1px solid salmon;
+  padding: 0.5rem;
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #0d4f86;
+}
+.info-box h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.wrapper button {
+  padding: 0.5rem;
+  color: white;
+  background-color: #0d4f86;
+  border: none;
+  font-size: large;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.heroImgWrap {
+  position: relative;
+  width: 36rem;
+  height: 36rem;
+}
+
+.heroImg {
+  object-fit: contain;
+  width: 25rem;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  opacity: 0.8;
+  z-index: 5;
+  /* background-color: aquamarine; */
+}

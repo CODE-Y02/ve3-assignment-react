@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background-image: url("./assets/bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: lighten;
+  background-size: cover;
+}
