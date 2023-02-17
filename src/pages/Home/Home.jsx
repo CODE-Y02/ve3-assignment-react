@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./Home.module.css";
 import heroImg from "../../assets/programing.svg";
-import blobImg from "../../assets/blob.svg";
+// import blobImg from "../../assets/blob.svg";
 
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import GoBackBtn from "../../components/GoBackBtn";
