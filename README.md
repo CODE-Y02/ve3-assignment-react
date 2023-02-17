@@ -95,3 +95,7 @@ _Main Focus was not on UI its on Functionality of applcation_
 
 - If data is not changing very frequently, ex-> Portfolio data or Landing page.
   In that case we can do fetch call on app load in background and save data in global store with context api or redux.
+
+- On UI I have not used and additional framework or library, A lot of UI improvement is possible.
+
+- Iam able to use MUI, typescript, bootstrap, Antd but as focus is on feature I have not used additional thing that we dont need.
