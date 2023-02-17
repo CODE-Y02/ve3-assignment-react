@@ -18,3 +18,6 @@
   text-transform: uppercase;
   color: #52004e;
 }
+.search-icn {
+  cursor: pointer;
+}

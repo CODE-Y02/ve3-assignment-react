@@ -1,6 +1,6 @@
 import { memo, useCallback, useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
@@ -50,7 +50,13 @@ const ModulePage = () => {
       <div className={styles["header"]}>
         {module && <div className={styles["header-l"]}>{module.name}</div>}
         <div className={styles["header-r"]}>
-          <img src={searchIcon} alt="" className={styles["search-icn"]} />
+          <Link to={"/search"}>
+            <img
+              src={searchIcon}
+              alt="search btn"
+              className={styles["search-icn"]}
+            />
+          </Link>
         </div>
       </div>
 

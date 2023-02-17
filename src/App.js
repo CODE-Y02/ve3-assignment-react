@@ -4,6 +4,7 @@ import InfoCard from "./components/InfoCard";
 import ModuleList from "./components/ModuleList";
 import Home from "./pages/Home/Home";
 import ModulePage from "./pages/ModulePage/ModulePage";
+import Search from "./pages/Search/Search";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/list" element={<ModuleList />} />
         </Route>
         <Route path="/module/:id" element={<ModulePage />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </div>
   );
