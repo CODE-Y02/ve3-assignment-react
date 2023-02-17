@@ -7,23 +7,14 @@
   width: 20rem;
   height: 24rem;
   max-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.438);
+  border-radius: 0.5rem;
 
   border: 1px solid salmon;
   padding: 0.5rem;
 }
-.info-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #0d4f86;
-}
-.info-box h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 0.5rem;
-}
 
-.wrapper button {
+/* .wrapper a.btn {
   padding: 0.5rem;
   color: white;
   background-color: #0d4f86;
@@ -31,6 +22,17 @@
   font-size: large;
   border-radius: 1rem;
   cursor: pointer;
+} */
+
+.wrapper > .btn {
+  background-color: #0d4f86;
+  border: none;
+  font-size: large;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
 .heroImgWrap {

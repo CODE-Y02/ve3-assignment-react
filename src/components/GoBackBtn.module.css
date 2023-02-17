@@ -1,0 +1,16 @@
+.home-icon {
+  position: fixed;
+  top: 1.5rem;
+  right: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: ease-in 0.5ms;
+  background-color: white;
+}
+
+.home-icon:hover {
+  background-color: rgb(209, 209, 209);
+}

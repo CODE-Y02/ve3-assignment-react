@@ -54,8 +54,9 @@
 }
 
 .tabData img {
-  height: 80%;
+  height: 20rem;
   padding: 0.5rem;
+  width: auto;
 }
 .data {
   display: flex;

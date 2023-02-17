@@ -1,26 +1,11 @@
-.home-icon {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  height: 1.25rem;
-  width: 1.25rem;
-  cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 50%;
-  transition: ease-in 0.5ms;
-}
-
-.home-icon:hover {
-  background-color: rgb(209, 209, 209);
-}
-
 .header {
   position: fixed;
   top: 1rem;
   left: 3.75rem;
   right: 3.75rem;
+  background-color: rgba(255, 255, 255, 0.466);
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   align-items: center;
@@ -28,7 +13,8 @@
   padding: 0.5rem;
 }
 .header-l {
+  margin: 0 0.5rem;
   font-size: larger;
   text-transform: uppercase;
-  color: #094372;
+  color: #52004e;
 }

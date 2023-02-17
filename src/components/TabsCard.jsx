@@ -1,45 +1,49 @@
 import { useState } from "react";
-import "./TabsCard.css";
+import styles from "./TabsCard.module.css";
 
-const TabsCard = () => {
-  const [activeTab, setActiveTab] = useState(1);
+const TabsCard = ({ tabsData }) => {
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const toggleTab = (idx) => {
+    console.log("chicked ????/", idx);
+    setActiveIdx(idx);
+  };
 
   return (
-    <div className="tabsWrapper">
-      <div className="tabs">
+    <div className={styles.tabsWrapper}>
+      <div className={styles.tabs}>
         <div
           onClick={() => {
-            setActiveTab(1);
+            toggleTab(0);
           }}
-          className={`${activeTab === 1 ? "active" : ""}  tabSelect`}
+          className={`${activeIdx === 0 ? styles["active"] : ""} ${
+            styles.tabSelect
+          }`}
         >
-          Tab1
+          {tabsData[0].title || "Tab 1"}
         </div>
         <div
           onClick={() => {
-            setActiveTab(2);
+            toggleTab(1);
           }}
-          className={`${activeTab === 2 && "active"}  tabSelect`}
+          className={`${activeIdx === 1 && styles.active}  ${styles.tabSelect}`}
         >
-          Tab2
+          {tabsData[1].title || "Tab 2"}
         </div>
         <div
           onClick={() => {
-            setActiveTab(3);
+            toggleTab(2);
           }}
-          className={`${activeTab === 3 && "active"}  tabSelect`}
+          className={`${activeIdx === 2 && styles.active}  ${styles.tabSelect}`}
         >
-          Tab3
+          {tabsData[2].title || "Tab 3"}
         </div>
       </div>
 
-      <div className="tabData">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bookshelf.jpg/320px-Bookshelf.jpg"
-          alt=""
-        />
-        <div className="data">
-          <h3> Lorem, ipsum dolor.tab - {activeTab} </h3>
+      <div className={styles.tabData}>
+        <img src={tabsData[activeIdx].imageUrl} alt={""} />
+        <div className={styles.data}>
+          <h3> Lorem, ipsum dolor.tab - {activeIdx + 1} </h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
             perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing

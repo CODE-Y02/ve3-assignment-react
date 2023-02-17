@@ -1,37 +1,52 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { memo, useCallback, useEffect, useState } from "react";
 
-import { modulesArr } from "../../dummy_data";
+import { useNavigate } from "react-router-dom";
+
+import { useParams } from "react-router-dom";
+
+// import { modulesArr } from "../../dummy_data";
+
+import Loading from "../../components/Loading";
 
 import styles from "./ModulePage.module.css";
 
 import searchIcon from "../../assets/search.svg";
-import homeIcon from "../../assets/home.svg";
+
 import TabsCard from "../../components/TabsCard";
+import GoBackBtn from "../../components/GoBackBtn";
+import axios from "axios";
 
 const ModulePage = () => {
   const [module, setModule] = useState(null);
   const { id } = useParams();
-
   const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  };
 
-  useEffect(() => {
-    const moduleData =
-      modulesArr.find((item) => item.id === Number(id)) || null;
-    if (moduleData) setModule(moduleData);
+  const fetchModule = useCallback(async () => {
+    try {
+      const res = await axios.get(
+        `${process.env.REACT_APP_BASE_URL}/module/${id}`
+      );
+      console.log(res);
+
+      setModule(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   }, [id]);
 
+  useEffect(() => {
+    fetchModule();
+  }, [fetchModule]);
+
+  console.log(module);
+
+  const goBack = (e) => {
+    e.preventDefault();
+    navigate("/list");
+  };
   return (
     <>
-      <img
-        src={homeIcon}
-        alt=""
-        className={styles["home-icon"]}
-        onClick={goBack}
-      />
+      <GoBackBtn goBack={goBack} />
       <div className={styles["header"]}>
         {module && <div className={styles["header-l"]}>{module.name}</div>}
         <div className={styles["header-r"]}>
@@ -39,8 +54,9 @@ const ModulePage = () => {
         </div>
       </div>
 
-      <TabsCard />
+      {module && <TabsCard tabsData={module.data} />}
+      {!module && <Loading />}
     </>
   );
 };
-export default ModulePage;
+export default memo(ModulePage);
