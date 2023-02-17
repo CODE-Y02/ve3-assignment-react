@@ -33,11 +33,10 @@ const Home = () => {
     navigate("/");
   };
   return (
-    <>
+    <div className={styles.home}>
       {showModuleList && <GoBackBtn goBack={goBack} />}
       <div className={styles.heroImgWrap}>
         <img src={heroImg} alt="hero img" className={styles.heroImg} />
-        <img src={blobImg} alt="" />
       </div>
 
       <div className={styles["wrapper"]}>
@@ -51,7 +50,7 @@ const Home = () => {
           {showModuleList ? "Select Module" : "Click Here To Continue"}
         </button>
       </div>
-    </>
+    </div>
   );
 };
 export default Home;

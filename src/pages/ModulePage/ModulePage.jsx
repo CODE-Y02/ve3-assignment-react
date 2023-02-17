@@ -45,7 +45,7 @@ const ModulePage = () => {
     navigate("/list");
   };
   return (
-    <>
+    <div className={styles.modulePageWrap}>
       <GoBackBtn goBack={goBack} />
       <div className={styles["header"]}>
         {module && <div className={styles["header-l"]}>{module.name}</div>}
@@ -62,7 +62,7 @@ const ModulePage = () => {
 
       {module && <TabsCard tabsData={module.data} />}
       {!module && <Loading />}
-    </>
+    </div>
   );
 };
 export default memo(ModulePage);
