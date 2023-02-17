@@ -75,7 +75,7 @@ _Main Focus was not on UI its on Functionality of applcation_
 
 - This applisction is generic in nature.
 
-- we have modeles and each of them contain some data
+- we have modules and each of them contain some data
 
 - when user click on start , we fetch module list from backend and render it on screen.
 
