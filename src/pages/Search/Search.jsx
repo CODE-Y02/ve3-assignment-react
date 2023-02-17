@@ -1,10 +1,16 @@
 import "./Search.css";
 import { posts } from "../../dummy_data";
 import GoBackBtn from "../../components/GoBackBtn";
+import { useNavigate } from "react-router-dom";
+
 const Search = () => {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <div className="searchPage">
-      <GoBackBtn />
+      <GoBackBtn goBack={goBack} />
       <form>
         <label htmlFor="searchInput">Type here to search</label>
         <input type="text" id="searchInput" placeholder="Search Posts" />
