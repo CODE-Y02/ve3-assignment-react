@@ -62,7 +62,7 @@ input:focus {
 .result {
   display: flex;
   padding: 1rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   gap: 1rem;
 }
 

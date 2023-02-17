@@ -1,4 +1,4 @@
-import "./Search.css";
+import styles from "./Search.module.css";
 import { posts } from "../../dummy_data";
 import GoBackBtn from "../../components/GoBackBtn";
 import { useNavigate } from "react-router-dom";
@@ -9,19 +9,19 @@ const Search = () => {
     navigate(-1);
   };
   return (
-    <div className="searchPage">
+    <div className={styles.searchPage}>
       <GoBackBtn goBack={goBack} />
       <form>
         <label htmlFor="searchInput">Type here to search</label>
         <input type="text" id="searchInput" placeholder="Search Posts" />
       </form>
-      <p className="result-nos">Showing 5 results ...</p>
-      <div className="results-wrap">
+      <p className={styles["result-nos"]}>Showing 5 results ...</p>
+      <div className={styles["results-wrap"]}>
         {posts.map((post, idx) => {
           return (
-            <div className="result" key={idx}>
+            <div className={styles.result} key={idx}>
               <img src={post.src} alt={post.alt} />
-              <div className="resultinfo">
+              <div className={styles.resultinfo}>
                 <h4>{post.title}</h4>
                 <p>{post.description}</p>
               </div>
@@ -29,9 +29,9 @@ const Search = () => {
           );
         })}
 
-        <div className="controls">
-          <span className="previous"> previous </span>
-          <span className="next"> next </span>
+        <div className={styles.controls}>
+          <span className={styles.previous}> previous </span>
+          <span className={styles.previous}> next </span>
         </div>
       </div>
     </div>
