@@ -1,6 +1,9 @@
 import styles from "./Search.module.css";
+
 import { posts } from "../../dummy_data";
+
 import GoBackBtn from "../../components/GoBackBtn";
+
 import { useNavigate } from "react-router-dom";
 
 const Search = () => {
@@ -8,6 +11,7 @@ const Search = () => {
   const goBack = () => {
     navigate(-1);
   };
+
   return (
     <div className={styles.searchPage}>
       <GoBackBtn goBack={goBack} />

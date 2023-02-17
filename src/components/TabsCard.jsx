@@ -5,7 +5,6 @@ const TabsCard = ({ tabsData }) => {
   const [activeIdx, setActiveIdx] = useState(0);
 
   const toggleTab = (idx) => {
-    console.log("chicked ????/", idx);
     setActiveIdx(idx);
   };
 

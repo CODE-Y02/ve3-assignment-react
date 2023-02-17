@@ -1,10 +1,11 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Loading from "./Loading";
-import styles from "./ModuleList.module.css";
 
-// import { availableModules } from "../dummy_data";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
+import Loading from "./Loading";
+
+import styles from "./ModuleList.module.css";
 
 const ModuleList = () => {
   const [modulesList, setModulesList] = useState([]);
@@ -12,11 +13,11 @@ const ModuleList = () => {
   const fetchModuleList = async () => {
     try {
       const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/list`);
-      // console.log(res);
+
       const { modules } = res.data;
       setModulesList(modules);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

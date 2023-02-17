@@ -1,20 +1,14 @@
 import { memo, useCallback, useEffect, useState } from "react";
 
-import { Link, useNavigate } from "react-router-dom";
-
-import { useParams } from "react-router-dom";
-
-// import { modulesArr } from "../../dummy_data";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 
 import Loading from "../../components/Loading";
-
-import styles from "./ModulePage.module.css";
-
-import searchIcon from "../../assets/search.svg";
-
 import TabsCard from "../../components/TabsCard";
 import GoBackBtn from "../../components/GoBackBtn";
-import axios from "axios";
+
+import styles from "./ModulePage.module.css";
+import searchIcon from "../../assets/search.svg";
 
 const ModulePage = () => {
   const [module, setModule] = useState(null);
@@ -26,11 +20,10 @@ const ModulePage = () => {
       const res = await axios.get(
         `${process.env.REACT_APP_BASE_URL}/module/${id}`
       );
-      console.log(res);
 
       setModule(res.data);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }, [id]);
 
@@ -38,12 +31,11 @@ const ModulePage = () => {
     fetchModule();
   }, [fetchModule]);
 
-  console.log(module);
-
   const goBack = (e) => {
     e.preventDefault();
     navigate("/list");
   };
+
   return (
     <div className={styles.modulePageWrap}>
       <GoBackBtn goBack={goBack} />

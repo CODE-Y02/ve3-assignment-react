@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 
-import styles from "./Home.module.css";
-import heroImg from "../../assets/programing.svg";
-// import blobImg from "../../assets/blob.svg";
-
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+
 import GoBackBtn from "../../components/GoBackBtn";
+
+import styles from "./Home.module.css";
+
+import heroImg from "../../assets/programing.svg";
+
 const Home = () => {
   const [showModuleList, setShowModuleList] = useState(false);
   const loc = useLocation();
 
   useEffect(() => {
-    // console.log("use Eff", showModuleList);
-    // console.log("use Eff", loc.pathname);
     if (loc.pathname === "/list") {
       setShowModuleList(true);
     } else {
@@ -32,6 +32,7 @@ const Home = () => {
     setShowModuleList(false);
     navigate("/");
   };
+
   return (
     <div className={styles.home}>
       {showModuleList && <GoBackBtn goBack={goBack} />}
