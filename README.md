@@ -6,6 +6,7 @@
 ## urls :-
 
 - [Live URL 1](https://ve3.onrender.com)
+- [Live URL 2 vercel](https://ve3.vercel.app/)
 
 - [backend repo here](https://github.com/CODE-Y02/ve3-assignment-backend)
 
