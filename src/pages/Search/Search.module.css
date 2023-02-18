@@ -14,7 +14,6 @@
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
-  border: 1px solid rgb(208, 205, 211);
 }
 .searchPage form {
   margin-bottom: 1rem;
@@ -67,8 +66,9 @@ input:focus {
 }
 
 .result img {
-  width: 255px;
-  height: auto;
+  max-width: 255px;
+  min-width: 150px;
+  padding: 0.5rem;
 }
 .resultinfo {
   display: flex;
@@ -103,4 +103,19 @@ input:focus {
 .controls span:hover {
   background-color: #0d4f86;
   color: white;
+}
+
+/* responsive for mobile */
+@media only screen and (max-width: 675px) {
+  .result {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .result img {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+  }
 }
