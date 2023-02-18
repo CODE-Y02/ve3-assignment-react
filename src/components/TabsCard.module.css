@@ -1,5 +1,4 @@
 .tabsWrapper {
-  /* border: 1px solid red; */
   min-width: 275px;
   height: auto;
   margin: 4rem;
@@ -19,12 +18,12 @@
 
 .tabSelect {
   width: 100%;
-  /* border: 1px solid gold; */
+
   text-align: center;
   padding: 1rem 0.5rem;
   font-size: larger;
   cursor: pointer;
-  /* background-color: rgb(255, 255, 255); */
+
   border-right: 1px solid rgb(59, 59, 59);
 
   border-bottom: 1px solid rgb(59, 59, 59);
@@ -74,4 +73,22 @@
 
 .data p {
   color: gray;
+}
+
+/* responsive for tab */
+
+@media only screen and (max-width: 665px) {
+  .tabData {
+    flex-direction: column;
+  }
+  .tabData img {
+    max-width: 100%;
+  }
+  .tabData .data {
+    max-width: 100%;
+  }
+  .tabsWrapper {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
