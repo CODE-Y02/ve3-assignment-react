@@ -12,10 +12,13 @@ const Search = () => {
     navigate(-1);
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className={styles.searchPage}>
       <GoBackBtn goBack={goBack} />
-      <form>
+      <form onSubmit={submitHandler}>
         <label htmlFor="searchInput">Type here to search</label>
         <input type="text" id="searchInput" placeholder="Search Posts" />
       </form>

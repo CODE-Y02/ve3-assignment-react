@@ -5,13 +5,14 @@
 
 ## urls :-
 
-- [Live URL 1](https://ve3.onrender.com)
-- [Live URL 2 vercel](https://ve3.vercel.app/)
+- [Live URL 1 vercel preffered](https://ve3.vercel.app/)
+- [Live URL 2](https://ve3.onrender.com)
 
 - [backend repo here](https://github.com/CODE-Y02/ve3-assignment-backend)
 
 ## stack used
 
+<html>
 <h3>Frontend</h3>
 
 <img src="https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png" style='margin:10px'  height="50px" />
@@ -26,14 +27,18 @@
 <h3>Backend </h3>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Node.js_logo_2015.svg" style='margin:10px;background:white;padding:0.5rem'  height="40px" />
-<h1 style='margin:10px;background:white;color:black;padding:0.5rem;width:fit-content'>Express Js </h1>
+<p style='margin:10px;background:white;color:black;padding:0.5rem;width:fit-content'>Express Js </p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" style='margin:10px;background:white;padding:0.5rem'  height="40px" />
-<h1 style='margin:10px;background:white;color:red;padding:0.5rem;width:fit-content'>Mongoose </h1>
+<p style='margin:10px;background:white;color:red;padding:0.5rem;width:fit-content'>Mongoose </p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/240px-Unofficial_JavaScript_logo_2.svg.png" height="50px" style='margin:10px' />
+
+</html>
+
+---
 
 # Setup Instruction
 
-    This is guide to setup client side to setup backend visit it's repo from above link;
+> This is guide to setup client side to setup backend visit it's repo from above link;
 
 ## Client setup :-
 
